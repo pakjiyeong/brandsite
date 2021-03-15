@@ -11,11 +11,11 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
-  color: #03C4EB;
+  color: #40ffaf;
   transition: 0.5s;
 }
 
@@ -31,7 +31,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -76,14 +76,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #03C4EB;
+  background: #50e2a5;
   color: #fff;
 }
 
 /*--------------------------------------------------------------
 # Welcome
 --------------------------------------------------------------*/
-#hero {
+#home {
   display: table;
   width: 100%;
   height: 100vh;
@@ -92,20 +92,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #home {
     background-attachment: fixed;
   }
 }
 
-#hero .hero-logo {
+#home .home-logo {
   margin: 20px;
 }
 
-#hero .hero-logo img {
+#home .home-logo img {
   max-width: 100%;
 }
 
-#hero .hero-container {
+#home .home-container {
   background: rgba(0, 0, 0, 0.8);
   display: table-cell;
   margin: 0;
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
-#hero h1 {
+#home h1 {
   margin: 30px 0 10px 0;
   font-weight: 700;
   line-height: 48px;
@@ -123,40 +123,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  #home h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
 
-#hero h2 {
+#home h2 {
   color: #ccc;
   margin-bottom: 50px;
 }
 
-#hero h2 span {
+#home h2 span {
   color: #fff;
   transition: 0.3s;
-  border-bottom: 2px solid #ff5151;
+  border-bottom: 2px solid #40ffaf;
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
+  #home h2 {
     font-size: 24px;
     line-height: 26px;
     margin-bottom: 30px;
   }
-  #hero h2 .rotating {
+  #home h2 .rotating {
     display: block;
   }
 }
 
-#hero .rotating > .animated {
+#home .rotating > .animated {
   display: inline-block;
 }
 
-#hero .actions a {
-  font-family: "Raleway", sans-serif;
+#home .actions a {
+  font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -168,16 +168,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
-#hero .btn-get-started {
-  background: #ff5151;
-  border: 2px solid #ff5151;
+#home .btn-get-started {
+  background: #40ffaf;
+  border: 2px solid #40ffaf;
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
+#home .btn-get-started:hover {
   background: none;
   border: 2px solid #fff;
   color: #fff;
+}
+
+#home .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#home .btn-services:hover {
+  background: #40ffaf;
+  border: 2px solid #40ffaf;
 }
 
 /*--------------------------------------------------------------
@@ -244,11 +254,88 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #03C4EB;
+  color: #40ffaf;
+}
+
+.nav-menu .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.nav-menu .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav-menu .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.nav-menu .drop-down ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #333333;
+}
+
+.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+  color: #40ffaf;
+}
+
+.nav-menu .drop-down > a:after {
+  content: "\ea99";
+  font-family: IcoFont;
+  padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.nav-menu .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down > a:after {
+  content: "\eaa0";
+  font-family: IcoFont;
+  position: absolute;
+  right: 15px;
+}
+
+@media (max-width: 1366px) {
+  .nav-menu .drop-down .drop-down ul {
+    left: -90%;
+  }
+  .nav-menu .drop-down .drop-down:hover > ul {
+    left: -100%;
+  }
+  .nav-menu .drop-down .drop-down > a:after {
+    content: "\ea9d";
+  }
 }
 
 /* Mobile Navigation */
@@ -303,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #03C4EB;
+  color: #40ffaf;
   text-decoration: none;
 }
 
@@ -383,7 +470,7 @@ section {
 .section-title-divider {
   width: 50px;
   height: 3px;
-  background: #03C4EB;
+  background: #40ffaf;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -434,50 +521,50 @@ section {
 
 /* Services Section
 --------------------------------*/
-#menu {
+#services {
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/services-bg.jpg") fixed center center;
   background-size: cover;
   padding: 80px 0 60px 0;
 }
 
-#menu .service-item {
+#services .service-item {
   margin-bottom: 20px;
 }
 
-#menu .service-icon {
+#services .service-icon {
   float: left;
-  background: #03C4EB;
+  background: #40ffaf;
   padding: 16px;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #03C4EB;
+  border: 1px solid #40ffaf;
 }
 
-#menu .service-icon i {
+#services .service-icon i {
   color: #fff;
   font-size: 24px;
 }
 
-#menu .service-item:hover .service-icon {
+#services .service-item:hover .service-icon {
   background: #fff;
 }
 
-#menu .service-item:hover .service-icon i {
-  color: #03C4EB;
+#services .service-item:hover .service-icon i {
+  color: #40ffaf;
 }
 
-#menu .service-title {
+#services .service-title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-#menu .service-title a {
+#services .service-title a {
   color: #111;
 }
 
-#menu .service-description {
+#services .service-description {
   margin-left: 80px;
   line-height: 24px;
 }
@@ -506,7 +593,7 @@ section {
 }
 
 #subscribe .subscribe-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -521,8 +608,8 @@ section {
 }
 
 #subscribe .subscribe-btn:hover {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
+  background: #40ffaf;
+  border: 2px solid #40ffaf;
 }
 
 /* Portfolio Section
@@ -552,7 +639,7 @@ section {
 }
 
 #portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
-  color: #03C4EB;
+  color: #40ffaf;
 }
 
 #portfolio #portfolio-flters li:last-child {
@@ -598,7 +685,7 @@ section {
 }
 
 #portfolio .portfolio-item .portfolio-info .preview-link:hover, #portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #03C4EB;
+  color: #40ffaf;
 }
 
 #portfolio .portfolio-item .portfolio-info .details-link {
@@ -657,7 +744,7 @@ section {
 
 #testimonials .profile h4 {
   font-weight: 700;
-  color: #03C4EB;
+  color: #40ffaf;
   margin-bottom: 5px;
 }
 
@@ -732,7 +819,7 @@ section {
 }
 
 #team .member .social a:hover {
-  color: #03C4EB;
+  color: #40ffaf;
 }
 
 #team .member .social i {
@@ -753,7 +840,7 @@ section {
 
 #contact .info i {
   font-size: 32px;
-  color: #03C4EB;
+  color: #40ffaf;
   float: left;
 }
 
@@ -818,11 +905,11 @@ section {
 }
 
 #contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
-  background-color: #03C4EB;
+  background-color: #40ffaf;
 }
 
 #contact .php-email-form button[type="submit"] {
-  background: #03C4EB;
+  background: #40ffaf;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -926,7 +1013,7 @@ section {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #03C4EB !important;
+  background-color: #40ffaf !important;
 }
 
 .portfolio-details .portfolio-info {
